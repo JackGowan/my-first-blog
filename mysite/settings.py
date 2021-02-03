@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+#added this 'path' to try and fix django not running on server
+from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+n6o6zs&=@zn-f!40_sr2nel3)3(jmr=pxyc()j7aebll!*u2q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #Changed this 
 #ALLOWED_HOSTS = []
@@ -126,3 +128,15 @@ STATIC_URL = '/static/'
 #added 'static file here'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+
+
+#stuff I added to try and fix the bug!!!
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+# You can then use os.path.join() to join other relative paths, such as:
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# TEMPLATE_DIRS = os.path.join(BASE_DIR, 'templates')
